@@ -4,7 +4,7 @@ import pandas as pd
 import assemblyai as aai
 from bs4 import BeautifulSoup
 
-aai.settings.api_key = st.secrets[aai_apikey]
+aai.settings.api_key = st.secrets["aai_apikey"]
 
 def get_default_branch(repo_name, token=None):
     headers = {'Authorization': f'token {token}'} if token else {}
@@ -52,7 +52,7 @@ repo_url = st.text_input("Enter the GitHub Repository URL", "https://github.com/
 
 if repo_url:
     repo_name = "/".join(repo_url.split("/")[-2:])
-    token = st.secrets[token]
+    token = st.secrets["token"]
     
     if st.button("Fetch Last Updated Times"):
         with st.spinner("Fetching data..."):
