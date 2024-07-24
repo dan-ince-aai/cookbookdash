@@ -26,7 +26,6 @@ def get_files_list(repo_name, sha, token=None):
     response = requests.get(url, headers=headers)
     response.raise_for_status()
     files = response.json().get('tree', [])
-    print(files)
     return [file['path'] for file in files if file['type'] == 'blob']
 
 def get_file_last_commit_date(repo_name, file_path, token=None):
@@ -43,7 +42,6 @@ def scrape_changelog():
     soup = BeautifulSoup(response.text, 'html.parser')
     articles = soup.find_all('article')
     changelog_text = "\n".join(article.get_text(separator="\n", strip=True) for article in articles)
-    print(changelog_text)
     return changelog_text
 
 st.title("Cookbook Dashboard")
