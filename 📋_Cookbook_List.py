@@ -6,12 +6,12 @@ from bs4 import BeautifulSoup
 from utils.func import get_default_branch, get_file_last_commit_date, get_latest_commit_sha, get_files_list, scrape_changelog
 
 st.title("Cookbook Dashboard")
-aai.settings.api_key = st.secrets["aai_apikey"]
+aai.settings.api_key = st.secrets["aai_api_key"]
 st.sidebar.success("Select a tool above.")
 
 repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
-token = st.secrets["token"]
+token = st.secrets["gh_token"]
     
 if st.button("Fetch Last Updated Times"):
     with st.spinner("Fetching data..."):

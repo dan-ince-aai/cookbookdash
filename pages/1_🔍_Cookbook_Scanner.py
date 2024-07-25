@@ -9,7 +9,7 @@ from utils.func import scrape_changelog, get_default_branch, get_latest_commit_s
 st.title("Scanner")
 repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
-token = st.secrets["token"]
+token = st.secrets["gh_token"]
 
 
 if st.button("Scan Cookbooks"):
