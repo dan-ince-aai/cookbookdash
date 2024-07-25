@@ -11,7 +11,6 @@ repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
 token = st.secrets["gh_token"]
 
-
 if st.button("Scan Cookbooks"):
         with st.spinner("Scanning cookbooks..."):
             try:

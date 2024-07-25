@@ -1,2 +1,4 @@
 assemblyai
 bs4
+gspread
+oauth2client

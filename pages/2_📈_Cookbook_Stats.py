@@ -30,10 +30,8 @@ with st.spinner('Fetching data...'):
             df['count'] = 1
             df = df.set_index('date').resample('D').count()
 
-            st.subheader('Commit Activity Timeline')
+            st.subheader('Repo Activity Timeline')
             st.line_chart(df)
-
-            st.success('Data fetched and plotted successfully!')
 
         except Exception as e:
             st.error(f'Error: {e}')
