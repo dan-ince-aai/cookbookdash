@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import streamlit as st
 import assemblyai as aai
-from utils.func import scrape_changelog, get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
+from cookbookdash.tools import scrape_changelog, get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
 
 st.title("Scanner")
 repo_url = "https://github.com/AssemblyAI/cookbook"
