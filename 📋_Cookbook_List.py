@@ -1,9 +1,7 @@
 import streamlit as st
-import requests
 import pandas as pd
 import assemblyai as aai
-from bs4 import BeautifulSoup
-from utils.func import get_default_branch, get_file_last_commit_date, get_latest_commit_sha, get_files_list, scrape_changelog
+from tools import get_default_branch, get_file_last_commit_date, get_latest_commit_sha, get_files_list, scrape_changelog
 
 st.title("Cookbook Dashboard")
 aai.settings.api_key = st.secrets["aai_api_key"]
