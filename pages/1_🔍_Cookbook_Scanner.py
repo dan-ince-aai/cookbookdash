@@ -1,7 +1,8 @@
 import streamlit as st
 import assemblyai as aai
-from utils.func import scrape_changelog, get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
+from ..utils.func import scrape_changelog, get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
 
+st.title("Scanner")
 repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
 token = st.secrets["token"]
