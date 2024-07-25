@@ -45,6 +45,7 @@ def scrape_changelog():
     return changelog_text
 
 st.title("Cookbook Dashboard")
+st.sidebar.success("Select a tool above.")
 
 repo_url = st.text_input("Enter the GitHub Repository URL", "https://github.com/AssemblyAI/cookbook")
 
