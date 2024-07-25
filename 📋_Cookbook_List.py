@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import assemblyai as aai
-from utils.tools import get_default_branch, get_file_last_commit_date, get_latest_commit_sha, get_files_list, scrape_changelog
+from utils.tools import get_default_branch, get_file_last_commit_date, get_latest_commit_sha, get_files_list
 
-st.title("Cookbook Dashboard")
+st.title("Cookbook List")
 aai.settings.api_key = st.secrets["aai_api_key"]
 
 repo_url = "https://github.com/AssemblyAI/cookbook"
