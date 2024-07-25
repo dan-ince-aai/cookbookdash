@@ -7,7 +7,7 @@ import assemblyai as aai
 from utils.tools import scrape_changelog, get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
 
 st.title("Cookbook Scanner")
-st.text("The scanner scrapes our changelog updates and passes this through Claude 3.5 along with our cookbook titles and recent commit dates. This is to scan for any new changelog updates which may render some of our cookbooks out-of-date.")
+st.text("The scanner scrapes our changelog updates and passes this through Claude 3.5 \n along with our cookbook titles and recent commit dates. \n This is to scan for any new changelog updates which may render \n some of our cookbooks out-of-date.")
 repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
 token = st.secrets["gh_token"]
