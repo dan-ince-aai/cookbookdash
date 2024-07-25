@@ -4,7 +4,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')
 
 import streamlit as st
 import pandas as pd
-from cookbookdash.tools import get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
+from utils.tools import get_default_branch, get_latest_commit_sha, get_files_list, get_file_last_commit_date
 
 repo_url = "https://github.com/AssemblyAI/cookbook"
 repo_name = "/".join(repo_url.split("/")[-2:])
